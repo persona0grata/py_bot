@@ -16,7 +16,7 @@ async def start_handler(message: types.Message):
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     user_full_name = message.from_user.full_name
-    logging.INFO(f'{user_id=} {user_full_name=} {time.asctime()}')
+    logging.info(f'{user_id=} {user_full_name=} {time.asctime()}')
     await message.reply(f'Привет, {user_full_name}!')
     
     for i in range(10):
