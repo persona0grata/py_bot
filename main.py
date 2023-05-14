@@ -21,7 +21,7 @@ async def start_handler(message: types.Message):
     logging.info(f'{user_id=} {user_full_name=} {time.asctime()}')
     await message.reply(f'Привет, {user_full_name}!')
     
-    for i in range(100):
+    for i in range(15):
         time.sleep(2 * random.randint(1, 10))
         await bot.send_message(user_id, MSG.format(user_name))
     
