@@ -32,18 +32,7 @@ async def start_handler(message: types.Message):
                 if random.randint(1, 2) == 1:
                     await bot.send_message(user_id, "Прораб злой")
             else:
-                await bot.send_message(user_id, "Sigaret chekishni va gorilla ichishni xohlaysiz")
-                
-async def sigi(message: types.Message):
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
-    user_full_name = message.from_user.full_name
-    logging.info(f'{user_id=} {user_full_name=} {time.asctime()}')
-    
-    while True:
-            time.sleep(30)
-            await bot.send_message(user_id, f'{user_name} сиги есть?')
-            
+                await bot.send_message(user_id, "Sigaret chekishni va gorilla ichishni xohlaysiz") 
             
     await bot.send_message(user_id, MSG2.format(user_name))
 if __name__ == '__main__':
