@@ -33,8 +33,6 @@ async def start_handler(message: types.Message):
                     await bot.send_message(user_id, "Прораб злой")
             else:
                 await bot.send_message(user_id, "Sigaret chekishni va gorilla ichishni xohlaysiz")
-        def stop_handler(message: types.Message):
-            break
     await bot.send_message(user_id, MSG2.format(user_name))
          
 if __name__ == '__main__':
