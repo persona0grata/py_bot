@@ -22,8 +22,18 @@ async def start_handler(message: types.Message):
     await message.reply(f'Привет, {user_full_name}!')
     
     for i in range(15):
-        time.sleep(2 * random.randint(1, 10))
-        await bot.send_message(user_id, MSG.format(user_name))
+        if(random.randint(1, 5) > 3):
+            time.sleep(2 * random.randint(1, 10))
+            await bot.send_message(user_id, MSG.format(user_name))
+        else:
+            if random.randint(1, 7) > 3:
+                await bot.send_message(user_id, "Я черный узбек!)")
+                await bot.send_message(user_id, "Надо класть кирпичи :(")
+                if random.randint(1, 2) == 1:
+                    await bot.send_message(user_id, "Прораб злой")
+            else:
+                await bot.send_message(user_id, "Sigaret chekishni va gorilla ichishni xohlaysiz")
+            
     
     await bot.send_message(user_id, MSG2.format(user_name))
         
