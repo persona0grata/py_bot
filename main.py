@@ -36,18 +36,6 @@ async def start_handler(message: types.Message):
         def stop_handler(message: types.Message):
             break
     await bot.send_message(user_id, MSG2.format(user_name))
-    
-async def sigi(message: types.Message):
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
-    user_full_name = message.from_user.full_name
-    logging.info(f'{user_id=} {user_full_name=} {time.asctime()}')
-    
-    while True:
-        time.sleep(30)
-        await bot.send_message(user_id, MSG.format(user_name))
-
-        
-        
+         
 if __name__ == '__main__':
     executor.start_polling(dp)
