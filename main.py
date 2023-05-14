@@ -22,6 +22,9 @@ async def start_handler(message: types.Message):
     await message.reply(f'Привет, {user_full_name}!')
     
     while True:
+        time.sleep(15)
+        await bot.send_message(user_id, f'{user_name} сиги есть?')
+'''
         if(random.randint(1, 5) > 3):
             time.sleep(2 * random.randint(1, 100))
             await bot.send_message(user_id, MSG.format(user_name))
@@ -33,7 +36,8 @@ async def start_handler(message: types.Message):
                     await bot.send_message(user_id, "Прораб злой")
             else:
                 await bot.send_message(user_id, "Sigaret chekishni va gorilla ichishni xohlaysiz") 
-            
+
     await bot.send_message(user_id, MSG2.format(user_name))
+'''
 if __name__ == '__main__':
     executor.start_polling(dp)
